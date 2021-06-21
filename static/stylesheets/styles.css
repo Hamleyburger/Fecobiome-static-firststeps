@@ -76,17 +76,11 @@ body .nav-panel .navbar .nav-link.disabled {
   background: url("../src/images/squeezed_hero_1800.jpg");
   background-position: left bottom;
   background-size: cover;
-  width: 100%;
-  height: 59vw;
   /*
-    height: 100vh;
-    @media only screen and (max-width: 500px) and (min-height: 500px) {
-        background-position: -60px bottom;
-    }
-    @media (min-aspect-ratio: '6/3') {
-        background-position: left bottom -87px;
-    }
+    width: 100%;
+    height: 59vw;
     */
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,5 +94,17 @@ body .nav-panel .navbar .nav-link.disabled {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 500px) and (min-height: 500px) {
+  .hero-section {
+    background-position: -60px bottom;
+  }
+}
+
+@media (min-aspect-ratio: 6 / 3) {
+  .hero-section {
+    background-position: left bottom -87px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
