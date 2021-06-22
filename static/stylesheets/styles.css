@@ -12,7 +12,7 @@ body {
   font-family: 'Crimson Text', serif;
 }
 
-body p {
+body p, body .btn {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -78,6 +78,28 @@ body .nav-panel .navbar .nav-link {
 
 body .nav-panel .navbar .nav-link.disabled {
   color: rgba(40, 22, 1, 0.5);
+}
+
+body footer {
+  background-color: #281601;
+  color: #f5f2eb;
+}
+
+body footer p {
+  color: #DEA139;
+}
+
+body footer p a {
+  color: #DEA139;
+}
+
+body footer .btn {
+  background: #EDEE8F;
+  color: #281601;
+}
+
+body footer .footericon {
+  font-size: 2rem;
 }
 
 .hero-section {
