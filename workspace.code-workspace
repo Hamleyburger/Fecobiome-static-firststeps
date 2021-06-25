@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../MinimalPairs"
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "FBI-initial"
+    }
+}
