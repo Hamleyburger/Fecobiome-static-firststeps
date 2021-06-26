@@ -4,8 +4,11 @@ body {
     color: $super-brown;
     font-family: $title-font;
 
-    p, .btn {
+    p, .btn, ul, a, a:hover {
         font-family: $light-font;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $title-font;
     }
 
     a {
@@ -14,6 +17,10 @@ body {
         &:hover {
             color: inherit;
         }
+    }
+
+    b {
+        font-weight: bold;
     }
 
     .hamburgericon {
@@ -38,19 +45,33 @@ body {
         align-items: center;
         text-decoration: none;
         transition: 300ms ease;
-        &.scrolled {
+        &.scrolled, &.clicked {
             background-color: rgba($creamy-white, 0.93);
             transition: 300ms ease;
         }
 
         .navbar {
+
             width: $FBI-max-width;
             max-width: 100%;
+
+            .navbar-brand {
+                font-family: $title-font;
+            }
+
             .nav-link {
                 color: inherit;
                 &.disabled {
                     color: rgba($super-brown, 0.5);
                 }
+            }
+            
+            .navbar-collapse {
+                align-items: center;
+                //background-color: rgba($creamy-white, 0.93);
+                width: calc(100% - 1%);
+                top: 0.5%;
+                left: 0.5%;
             }
         }
 
@@ -58,13 +79,61 @@ body {
     }
 
 
+    .page-title-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        background: url("../src/images/page-title-image.jpg"), rgba($creamy-white, 0.5);
+        background-position: left center;
+        background-size:100%;
+        background-blend-mode: luminosity;
+        color: rgba($super-brown, 0.85);
+        
+        height: 30vw;
+        
+        @media only screen and (max-width: 1200px) {
+            height: 40vw;
+        }
+        @media only screen and (max-width: $FBI-max-width) {
+            height: 70vw;
+            background-size: cover;
+            background-position: left -68px center;
+        }
+        
+        
+        h1 {
+
+            font-size: 56px;
+        }
+    
+        .page-title-group {
+            margin: 20px;
+            margin-left: 25px;
+            .hero-punchline {
+                margin-left: 20px;
+    
+            }
+        }
+    }
+    
+
+
+
     .FBI-max-width {
         max-width: $FBI-max-width;
     }
 
 
+
+
     footer {
-        background-color: $super-brown;
+        background: url("../src/images/page-title-image.jpg"), rgba($super-brown, 0.82);
+        background-position: center bottom;
+        background-size:500%;
+        background-blend-mode: darken;
         color: $creamy-white;
         $footer-orange: lighten($earth-orange, 12%);
         p {

@@ -12,8 +12,12 @@ body {
   font-family: "Crimson Text", serif;
 }
 
-body p, body .btn {
+body p, body .btn, body ul, body a, body a:hover {
   font-family: "Raleway", sans-serif;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Crimson Text", serif;
 }
 
 body a {
@@ -23,6 +27,10 @@ body a {
 
 body a:hover {
   color: inherit;
+}
+
+body b {
+  font-weight: bold;
 }
 
 body .hamburgericon {
@@ -62,7 +70,7 @@ body .nav-panel {
   transition: 300ms ease;
 }
 
-body .nav-panel.scrolled {
+body .nav-panel.scrolled, body .nav-panel.clicked {
   background-color: rgba(246, 247, 240, 0.93);
   -webkit-transition: 300ms ease;
   transition: 300ms ease;
@@ -73,6 +81,10 @@ body .nav-panel .navbar {
   max-width: 100%;
 }
 
+body .nav-panel .navbar .navbar-brand {
+  font-family: "Crimson Text", serif;
+}
+
 body .nav-panel .navbar .nav-link {
   color: inherit;
 }
@@ -81,12 +93,73 @@ body .nav-panel .navbar .nav-link.disabled {
   color: rgba(52, 40, 28, 0.5);
 }
 
+body .nav-panel .navbar .navbar-collapse {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% - 1%);
+  top: 0.5%;
+  left: 0.5%;
+}
+
+body .page-title-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("../src/images/page-title-image.jpg"), rgba(246, 247, 240, 0.5);
+  background-position: left center;
+  background-size: 100%;
+  background-blend-mode: luminosity;
+  color: rgba(52, 40, 28, 0.85);
+  height: 30vw;
+}
+
+@media only screen and (max-width: 1200px) {
+  body .page-title-section {
+    height: 40vw;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  body .page-title-section {
+    height: 70vw;
+    background-size: cover;
+    background-position: left -68px center;
+  }
+}
+
+body .page-title-section h1 {
+  font-size: 56px;
+}
+
+body .page-title-section .page-title-group {
+  margin: 20px;
+  margin-left: 25px;
+}
+
+body .page-title-section .page-title-group .hero-punchline {
+  margin-left: 20px;
+}
+
 body .FBI-max-width {
   max-width: 720px;
 }
 
 body footer {
-  background-color: #34281c;
+  background: url("../src/images/page-title-image.jpg"), rgba(52, 40, 28, 0.82);
+  background-position: center bottom;
+  background-size: 500%;
+  background-blend-mode: darken;
   color: #f6f7f0;
 }
 
@@ -147,6 +220,15 @@ body footer .footericon {
   margin-left: 20px;
 }
 
+.key-mission-statement {
+  margin: 100px auto;
+  padding: 0px 20px;
+}
+
+.key-mission-statement h1, .key-mission-statement h2, .key-mission-statement h3, .key-mission-statement h4, .key-mission-statement h5, .key-mission-statement h6 {
+  color: #ae781d;
+}
+
 .news {
   margin: 50px 0px;
 }
@@ -155,24 +237,19 @@ body footer .footericon {
   padding: 0;
 }
 
-@media only screen and (min-width: 320px) {
-  .news ul {
-    text-align: justify;
-  }
-}
-
 .news ul li {
   list-style-type: none;
   border-bottom: 1px solid rgba(52, 40, 28, 0.3);
   margin-top: 20px;
-  padding: 15px 0px;
+  padding: 20px 0px;
 }
 
-.news ul li h5 {
+.news ul li .news-title {
   color: #ae781d;
+  padding-bottom: 10px;
 }
 
-.news ul li h5 .news-date {
+.news ul li .news-title .news-date {
   float: right;
   font-family: "Raleway", sans-serif;
   font-size: 75%;
