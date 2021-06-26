@@ -6,3 +6,11 @@
     console.log(title_position);
  $('.nav-panel').toggleClass('scrolled', $(this).scrollTop() > title_position.top-60);
  });
+
+
+
+  $(document).ready(function() {
+    $(".navbar-toggler").click(function () {
+      $(".nav-panel").toggleClass("clicked");
+    });
+  });

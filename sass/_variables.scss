@@ -1,11 +1,12 @@
-$creamy-white: lighten(#EDEEDF, 5%); //kat og tekst
+$creamy-white: #EDEEDF; //kat og tekst
 $sky-yellow: #EDEE8F; // hat og navbar. Meta tag theme-color must be same as this in layout.html
 $earth-orange: #DEA139; //lysere navbar?
-$super-brown: #34281c; //solen
+$super-brown: #453525; //solen
 $grass-green: #3F4601; //??
 
 // modified colours
 $earth-orange-dark: darken($earth-orange, 15%);
+$creamy-white-light: lighten($creamy-white, 5%);
 
 
 
