@@ -16,7 +16,7 @@ html {
         padding-bottom: $footer-height;
         position: relative;
         min-height: 100vh;
-        background-image: url('/images/pastel_flowers.jpeg');
+        background-image: url('images/pastel_flowers.jpeg');
         background-repeat: repeat;
         background-size: 40%;
         background-attachment: fixed;
@@ -47,7 +47,7 @@ html {
 
 .head {
 
-    background: url('/images/Anne-Sofie-visitkort.jpg') rgba(255, 255, 255, 0.3);
+    background: url('images/Anne-Sofie-visitkort.jpg') rgba(255, 255, 255, 0.3);
     //background-blend-mode: lighten;
     height: 40vw;
     width: 100%;
