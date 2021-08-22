@@ -1,12 +1,14 @@
 {
 	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../MinimalPairs"
-		}
-	],
+        {
+            "name": "Hamleyburger.github.io",
+            "path": "."
+        },
+        {
+            "name": "Zirkusrevsbech",
+            "path": "../Zirkusrevsbech"
+        }
+    ],
     "settings": {
         "liveServer.settings.multiRootWorkspaceName": "Hamleyburger.github.io"
     }
