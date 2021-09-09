@@ -1,0 +1,37 @@
+body {
+    background: url(images/fiskpattern.svg), linear-gradient(180deg, #ffe8eb 0%, rgba(217,150,89,0.5270483193277311) 53%, rgba(105,77,40,0) 100%);
+    background-blend-mode: color-burn;
+    background-size: 400px;
+    background-repeat: repeat;
+    .main {
+        padding-top: 50px;
+        [class*="col-"], .col {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        max-width: 1000px;
+        margin: auto;
+        .card {
+            width: 350px;
+            height: 500px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            .card-body {
+                background: #e8dada;
+                display: flex;
+                flex-direction: column;
+                padding: 40px 25px;
+                overflow: scroll;
+                a {
+                    color: #4b0a25;
+                }
+                .btn {
+                    background-color: #730e38;
+                    border: 1px solid #4b0a25;
+                    margin-top: auto;
+                    color: white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+body {
+  background: url(images/fiskpattern.svg), -webkit-gradient(linear, left top, left bottom, from(#ffe8eb), color-stop(53%, rgba(217, 150, 89, 0.527048)), to(rgba(105, 77, 40, 0)));
+  background: url(images/fiskpattern.svg), linear-gradient(180deg, #ffe8eb 0%, rgba(217, 150, 89, 0.527048) 53%, rgba(105, 77, 40, 0) 100%);
+  background-blend-mode: color-burn;
+  background-size: 400px;
+  background-repeat: repeat;
+}
+
+body .main {
+  padding-top: 50px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+body .main [class*="col-"], body .main .col {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .main .card {
+  width: 350px;
+  height: 500px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+body .main .card .card-body {
+  background: #e8dada;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 25px;
+  overflow: scroll;
+}
+
+body .main .card .card-body a {
+  color: #4b0a25;
+}
+
+body .main .card .card-body .btn {
+  background-color: #730e38;
+  border: 1px solid #4b0a25;
+  margin-top: auto;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */
