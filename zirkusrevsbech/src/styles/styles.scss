@@ -1,12 +1,17 @@
 // variables
 
-$pink: rgb(194, 29, 125);
-$yellow: rgb(241, 208, 19);
-$orange: rgb(240, 160, 11);
-$purple: rgb(113, 81, 139);
-$darkpurple: darken($purple, 10%);
-$footer-height: 100px;
 
+// Logo colours
+$purple: rgb(63, 0, 56);
+$yellow: rgb(255, 236, 0);
+
+$pink: rgb(194, 29, 125);
+//$yellow: rgb(241, 208, 19);
+$orange: rgb(240, 160, 11);
+//$purple: rgb(113, 81, 139);
+$darkpurple: darken($purple, 5%);
+$footer-height: 100px;
+$page-font: 'Urbanist', sans-serif;
 
 
 html {
@@ -16,7 +21,7 @@ html {
         padding-bottom: $footer-height;
         position: relative;
         min-height: 100vh;
-        background-image: url('images/pastel_flowers.jpeg');
+        background-image: url('../../images/pastel_flowers.jpeg');
         background-repeat: repeat;
         background-size: 40%;
         background-attachment: fixed;
@@ -29,27 +34,37 @@ html {
         }
     }
     main {
+        padding-top: 32vw;
         width: 100%;
         max-width: 1000px;
         margin: auto;
+        @media only screen and (max-width: 662px) {
+            padding-top: 60vw;
+        }
 
     }
 }
 
 .flowers {
-    width: 65%;
-    position: absolute;
-    left: 0;
-    top: 0;
+    width: 60%;
+    position: fixed;
+    left: -7%;
+    top: -6%;
     z-index: 2;
+    @media only screen and (max-width: 662px) {
+        top: -2%;
+        left: 0;
+
+    }
+
 }
 
 
 .head {
 
-    background: url('images/Anne-Sofie-visitkort.jpg') rgba(255, 255, 255, 0.3);
+    background: url('../../images/Anne-Sofie-visitkort.jpg') rgba(255, 255, 255, 0.3);
     //background-blend-mode: lighten;
-    height: 40vw;
+    height: 42vw;
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -58,17 +73,33 @@ html {
     justify-content: flex-end;
 
     @media only screen and (max-width: 662px) {
-        height: 265px;
+        height: 70vw;
 
     }
 
     .titlebox {
         background-color: rgba(255, 255, 255, 0.6);
-        height: 80%;
-        width: 60%;
-        margin-right: 5%;
+        height: 100%;
+        width: 56%;
+        margin-right: 0;
         padding: 20px;
         display: flex;
+        clip-path: polygon(32% 0, 100% 0, 100% 100%, 0% 100%);
+
+        &.purple {
+            background-color: rgba($purple, 0.88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                margin-left: 30%;
+                margin-right: 15%;
+                margin-top: 13%;
+            }
+        }
+
+
         .title-content {
             margin: auto;
             width: 100%;
@@ -108,6 +139,28 @@ html {
     }
 }
 
+a {
+    color: $purple;
+}
+.container-fluid .row .editable {
+
+    .WordSection1 {
+        color: $darkpurple !important;
+        font-family: $page-font !important;
+        p.MsoNormal, li.MsoNormal, div.MsoNormal {
+            color: $darkpurple !important;
+            font-family: $page-font !important;
+        }
+    }
+    h1, h2, h3 {
+
+        color: $darkpurple !important;
+        font-family: $page-font !important;
+        font-weight: 900;
+
+    }
+}
+
 .purple {
     .social-icons {
         justify-content: center;
@@ -127,7 +180,14 @@ html {
     text-align: center;
     &.subheader {
         overflow: hidden;
-        padding: 30px 0;
+        padding: 69px 0;
+        clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 78%);
+        height: 210px;
+        position: absolute;
+        top: 38vw;
+        @media only screen and (max-width: 662px) {
+            top: 55vw;
+        }
     }
 
 }
@@ -146,9 +206,19 @@ html {
         margin: auto;
         max-width: 100%;
         height: 100%;
+        img {
+            height: 50%;
+        }
     }
     .col {
         margin-bottom: 15px;
+    }
+    .row {
+        min-height: 350px;
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+        @media only screen and (max-width: 662px) {
+            clip-path: polygon(0 0, 100% 7%, 100% 100%, 0% 100%);
+        }
     }
 }
 .myrow {
@@ -158,6 +228,7 @@ html {
 }
 
 footer {
+
     margin-bottom: 0 !important;
     display: flex;
     justify-content: center;

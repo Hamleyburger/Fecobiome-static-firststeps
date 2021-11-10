@@ -13,12 +13,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/603271f4a3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="src/scripts/include.js"></script>
+    <link rel="stylesheet" href="src/styles/styles.css">
 </head>
 <body>
-    <img class="flowers" src="images/vippng.com-bohemian-png-2081643.png" alt="Overlay flower pic">
+    <img class="flowers" src="images/topleftsunflowers.png" alt="Overlay flower pic">
     <div class="head">
-        <div class="titlebox shadow">
+
+
+
+        <!--div class="titlebox shadow">
             <div class="title-content">
 
                 <div class="zirkus">
@@ -30,7 +34,17 @@
                 <hr style="color: orange; border-top: 3px solid orange;" class="ruler">
                 <div class="slogan">2hand tøj - køb, salg & leje</div>
             </div>
+        </div-->
+
+
+        <div class="titlebox purple shadow">
+            <div class="title-content">
+                <img class="logo" src="images/Logo_ZR_cropped.svg" alt="Overlay flower pic">
+            </div>
         </div>
+
+
+
     </div>
     <div class="purple container-fluid subheader shadow">
         <div class="row social-icons">
@@ -65,45 +79,46 @@
     <div class="container-fluid cards">
         <div class="row justify-content-between">
             
-            <div class="col col-12 col-md-3">
+            <div class="editable col col-12 col-md-3">
                 
                 <div class="card shadow" style="width: 18rem;">
                     <img src="images/clothes.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Køb fedt vintagetøj</p>
+                        <div w3-include-html="tekster/blok1.html"></div>
                     </div>
                 </div>
             </div>
-            <div class="col col-12 col-md-3">
-                <div class="card shadow" style="width: 18rem;">
-                    <img src="images/clothes.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">Sælg dit fede vintagetøj :D</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-12 col-md-3">
+            <div class="editable col col-12 col-md-3">
                 <div class="card shadow" style="width: 18rem;">
                     <img src="images/clothes.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Byt noget tøj til noget andet </p>
+                        <div w3-include-html="tekster/blok2.html"></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col myrow shadow">
-                <h2>
-                    Velkommen til Zirkus Revsbech!
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum expedita nostrum accusamus officiis tenetur quia delectus corporis, molestiae, officia qui excepturi vero totam consequuntur quae adipisci earum eum non? Non reprehenderit obcaecati nesciunt porro hic? 
-                </p>
-                <p>
-                    A voluptatem neque exercitationem tempore quas provident dicta quaerat deserunt voluptas repudiandae ducimus saepe iusto aperiam vel in, quisquam et cum dolorem aliquid veritatis? Vitae tempora ratione provident rem nostrum quidem soluta!
-                </p>
+            <div class="editable col col-12 col-md-3">
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="images/clothes.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div w3-include-html="tekster/blok3.html"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="editable col myrow shadow">
+                        <div w3-include-html="tekster/nyheder.html"></div>
+            </div>
+            </div>
+            </div>
+            
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="editable col myrow shadow">
+                        <div w3-include-html="tekster/beskrivelse.html"></div>
             </div>
         </div>
     </div>
@@ -112,11 +127,14 @@
     <footer class="purple container-fluid shadow">
         <div class="row">
             <div class="col">
-                Lilla bjælke igen. Adresse: Musiconbutik Allé 1, 4000 Roskilde
+                <div w3-include-html="tekster/footer.html"></div>
             </div>
         </div>
     </footer>
-        
-        
+
+    <script>
+        includeHTML()
+    </script>
+
     </body>
     </html>
