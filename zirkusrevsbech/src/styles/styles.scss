@@ -46,14 +46,14 @@ html {
 }
 
 .flowers {
-    width: 60%;
+    width: 40%;
     position: fixed;
-    left: -7%;
-    top: -6%;
     z-index: 2;
+
     @media only screen and (max-width: 662px) {
-        top: -2%;
-        left: 0;
+        width: 60%;
+        position: fixed;
+        z-index: 2;
 
     }
 
@@ -62,12 +62,13 @@ html {
 
 .head {
 
-    background: url('../../images/Anne-Sofie-visitkort.jpg') rgba(255, 255, 255, 0.3);
+    //background: url('../../images/insta/sofiebwstjerne.jpeg') rgba(255, 255, 255, 1.0);
     //background-blend-mode: lighten;
+    //background-size: cover;
+    //background-position: center;
+    position: relative;
     height: 42vw;
     width: 100%;
-    background-position: center;
-    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -77,28 +78,66 @@ html {
 
     }
 
-    .titlebox {
-        background-color: rgba(255, 255, 255, 0.6);
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    .lefthead {
+        clip-path: polygon(0% 0, 95% 0, 61% 100%, 0% 100%);
+        position: absolute;
+        width: 64%;
         height: 100%;
-        width: 56%;
-        margin-right: 0;
-        padding: 20px;
-        display: flex;
-        clip-path: polygon(32% 0, 100% 0, 100% 100%, 0% 100%);
-
-        &.purple {
-            background-color: rgba($purple, 0.88);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            img {
-                margin-left: 30%;
-                margin-right: 15%;
-                margin-top: 13%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        .bg-wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 0;
+            background-image: url(../../images/leppardfur.jpeg);
+            background-size: 100%;
+            filter: brightness(0.1) saturate(0.3);
+        }
+        //background-color: rgba(9, 7, 19, 0.96);
+        img {
+            // LOGO
+            width: 37%;
+            margin-left: 17%;
+            margin-top: 20%;
+            filter: drop-shadow(0px 0px 2px rgba(255, 236, 0, 0.6));
+            @media only screen and (max-width: 662px) {
+                width: 53%;
+                margin-left: 14%;
+                margin-top: 32%;
             }
         }
 
+    }
+    .righthead {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 64%;
+        margin-right: 0;
+        overflow: hidden;
+
+        .sofie {
+            width: 100%;
+            position: absolute;
+            transform: translate(50%,-50%);
+            top: 69%; 
+            right:50%;
+            @media only screen and (max-width: 662px) {
+                width: 110%;
+                top: 50%;
+                right: 34%;
+            }
+            @media only screen and (max-width: 446px) {
+                width: 142%;
+                top: 51%;
+                right: 41%;
+
+            }
+        }
 
         .title-content {
             margin: auto;
@@ -110,6 +149,7 @@ html {
             font-size: 69px;
             font-weight: 900;
             line-height: 21px;
+
         }
         .revsbech {
             color: $yellow;
@@ -162,6 +202,10 @@ a {
 }
 
 .purple {
+    width: 100%;
+    background-color: #f7b138;
+    color:  #eb5ea0d0;
+    text-align: center;
     .social-icons {
         justify-content: center;
         .col-sm-1 {
@@ -173,11 +217,8 @@ a {
     }
     .fab, .fas {
         font-size: 2.6em;
+        text-shadow: #ffc600 2px 1px 0px;
     }
-    width: 100%;
-    background-color: $purple;
-    color: $orange;
-    text-align: center;
     &.subheader {
         overflow: hidden;
         padding: 69px 0;

@@ -35,26 +35,23 @@ html main {
 }
 
 .flowers {
-  width: 60%;
+  width: 40%;
   position: fixed;
-  left: -7%;
-  top: -6%;
   z-index: 2;
 }
 
 @media only screen and (max-width: 662px) {
   .flowers {
-    top: -2%;
-    left: 0;
+    width: 60%;
+    position: fixed;
+    z-index: 2;
   }
 }
 
 .head {
-  background: url("../../images/Anne-Sofie-visitkort.jpg") rgba(255, 255, 255, 0.3);
+  position: relative;
   height: 42vw;
   width: 100%;
-  background-position: center;
-  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,6 +61,8 @@ html main {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+          filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 
 @media only screen and (max-width: 662px) {
@@ -72,44 +71,85 @@ html main {
   }
 }
 
-.head .titlebox {
-  background-color: rgba(255, 255, 255, 0.6);
+.head .lefthead {
+  -webkit-clip-path: polygon(0% 0, 95% 0, 61% 100%, 0% 100%);
+          clip-path: polygon(0% 0, 95% 0, 61% 100%, 0% 100%);
+  position: absolute;
+  width: 64%;
   height: 100%;
-  width: 56%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.head .lefthead .bg-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  background-image: url(../../images/leppardfur.jpeg);
+  background-size: 100%;
+  -webkit-filter: brightness(0.1) saturate(0.3);
+          filter: brightness(0.1) saturate(0.3);
+}
+
+.head .lefthead img {
+  width: 37%;
+  margin-left: 17%;
+  margin-top: 20%;
+  -webkit-filter: drop-shadow(0px 0px 2px rgba(255, 236, 0, 0.6));
+          filter: drop-shadow(0px 0px 2px rgba(255, 236, 0, 0.6));
+}
+
+@media only screen and (max-width: 662px) {
+  .head .lefthead img {
+    width: 53%;
+    margin-left: 14%;
+    margin-top: 32%;
+  }
+}
+
+.head .righthead {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 64%;
   margin-right: 0;
-  padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-clip-path: polygon(32% 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(32% 0, 100% 0, 100% 100%, 0% 100%);
+  overflow: hidden;
 }
 
-.head .titlebox.purple {
-  background-color: rgba(63, 0, 56, 0.88);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.head .righthead .sofie {
+  width: 100%;
+  position: absolute;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  top: 69%;
+  right: 50%;
 }
 
-.head .titlebox.purple img {
-  margin-left: 30%;
-  margin-right: 15%;
-  margin-top: 13%;
+@media only screen and (max-width: 662px) {
+  .head .righthead .sofie {
+    width: 110%;
+    top: 50%;
+    right: 34%;
+  }
 }
 
-.head .titlebox .title-content {
+@media only screen and (max-width: 446px) {
+  .head .righthead .sofie {
+    width: 142%;
+    top: 51%;
+    right: 41%;
+  }
+}
+
+.head .righthead .title-content {
   margin: auto;
   width: 100%;
 }
 
-.head .titlebox .zirkus {
+.head .righthead .zirkus {
   color: #c21d7d;
   font-family: -webkit-pictograph;
   font-size: 69px;
@@ -117,31 +157,31 @@ html main {
   line-height: 21px;
 }
 
-.head .titlebox .revsbech {
+.head .righthead .revsbech {
   color: #ffec00;
   font-size: 40px;
   font-family: cursive;
 }
 
 @media only screen and (max-width: 662px) {
-  .head .titlebox .zirkus {
+  .head .righthead .zirkus {
     font-size: 12vw;
   }
-  .head .titlebox .revsbech {
+  .head .righthead .revsbech {
     font-size: 7vw;
   }
 }
 
-.head .titlebox hr {
+.head .righthead hr {
   margin-top: 0;
 }
 
-.head .titlebox .slogan {
+.head .righthead .slogan {
   color: #c21d7d;
   font-weight: 600;
 }
 
-.head .titlebox div {
+.head .righthead div {
   text-align: right;
 }
 
@@ -167,8 +207,8 @@ a {
 
 .purple {
   width: 100%;
-  background-color: #3f0038;
-  color: #f0a00b;
+  background-color: #f7b138;
+  color: #eb5ea0d0;
   text-align: center;
 }
 
@@ -188,6 +228,7 @@ a {
 
 .purple .fab, .purple .fas {
   font-size: 2.6em;
+  text-shadow: #ffc600 2px 1px 0px;
 }
 
 .purple.subheader {
