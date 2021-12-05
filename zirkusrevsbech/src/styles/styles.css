@@ -7,7 +7,7 @@ html body {
   padding-bottom: 100px;
   position: relative;
   min-height: 100vh;
-  background-image: url("../../images/pastel_flowers.jpeg");
+  background-image: url("../../images/concrete-wall-g624dcf081_1920.jpg");
   background-repeat: repeat;
   background-size: 40%;
   background-attachment: fixed;
@@ -42,7 +42,8 @@ html main {
 
 @media only screen and (max-width: 662px) {
   .flowers {
-    width: 60%;
+    width: 70%;
+    min-width: 300px;
     position: fixed;
     z-index: 2;
   }
@@ -68,6 +69,7 @@ html main {
 @media only screen and (max-width: 662px) {
   .head {
     height: 70vw;
+    height: 180vw;
   }
 }
 
@@ -80,6 +82,17 @@ html main {
   left: 0;
   top: 0;
   z-index: 1;
+}
+
+@media only screen and (max-width: 662px) {
+  .head .lefthead {
+    width: 100%;
+    height: 60%;
+    left: 0;
+    top: 0;
+    -webkit-clip-path: polygon(0% 0, 354% 0, 0% 87%, 0% 100%);
+            clip-path: polygon(0% 0, 354% 0, 0% 87%, 0% 100%);
+  }
 }
 
 .head .lefthead .bg-wrapper {
@@ -95,16 +108,18 @@ html main {
 
 .head .lefthead img {
   width: 37%;
-  margin-left: 17%;
-  margin-top: 20%;
+  margin-left: 20%;
+  margin-top: 23%;
   -webkit-filter: drop-shadow(0px 0px 2px rgba(255, 236, 0, 0.6));
           filter: drop-shadow(0px 0px 2px rgba(255, 236, 0, 0.6));
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
 }
 
 @media only screen and (max-width: 662px) {
   .head .lefthead img {
     width: 53%;
-    margin-left: 14%;
+    margin-left: 23%;
     margin-top: 32%;
   }
 }
@@ -119,28 +134,29 @@ html main {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 662px) {
+  .head .righthead {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
 .head .righthead .sofie {
   width: 100%;
   position: absolute;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
   top: 69%;
-  right: 50%;
+  right: 45%;
 }
 
 @media only screen and (max-width: 662px) {
   .head .righthead .sofie {
-    width: 110%;
-    top: 50%;
-    right: 34%;
-  }
-}
-
-@media only screen and (max-width: 446px) {
-  .head .righthead .sofie {
-    width: 142%;
-    top: 51%;
-    right: 41%;
+    width: 100%;
+    top: 70%;
+    left: -50%;
   }
 }
 
@@ -218,6 +234,14 @@ a {
           justify-content: center;
 }
 
+@media only screen and (max-width: 662px) {
+  .purple .social-icons {
+    margin-top: 10%;
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+}
+
 .purple .social-icons .col-sm-1 {
   margin: 0 10px;
 }
@@ -243,7 +267,10 @@ a {
 
 @media only screen and (max-width: 662px) {
   .purple.subheader {
-    top: 55vw;
+    -webkit-clip-path: polygon(0% 0%, 100% 28%, 100% 99%, 0% 74%);
+            clip-path: polygon(0% 0%, 100% 28%, 100% 99%, 0% 74%);
+    height: 250px;
+    top: 157vw;
   }
 }
 
@@ -259,10 +286,8 @@ a {
   margin: auto;
   max-width: 100%;
   height: 100%;
-}
-
-.cards .card img {
-  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cards .col {
@@ -271,14 +296,11 @@ a {
 
 .cards .row {
   min-height: 350px;
-  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
 }
 
 @media only screen and (max-width: 662px) {
   .cards .row {
-    -webkit-clip-path: polygon(0 0, 100% 7%, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 7%, 100% 100%, 0% 100%);
+    margin-top: 100px;
   }
 }
 
